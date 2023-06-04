@@ -1,0 +1,227 @@
+//text
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.8rem;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sanityText {
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+.ddArrow {
+  &::after {
+    content: "▾";
+  }
+}
+
+//Dropdown Menu
+.ddMenu {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  margin-bottom: 1.8rem;
+}
+
+.hideExpand {
+  display: none;
+}
+
+.dd__Item:not(:first-of-type) {
+  font-size: 2.2rem;
+  margin-top: 1em;
+}
+
+//Image Wrapper
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.imgWrapper--Headshot {
+  height: 22.7rem;
+  width: 22.7rem;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 50%;
+
+  img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+//Buttons
+.button {
+  padding-left: 2.6rem;
+  padding-right: 2.6rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
+.button--black {
+  border: 1px solid $black;
+  color: $black;
+}
+
+.button--Fill {
+  font-size: 1.8rem;
+  color: white;
+  border: 0;
+  background-color: $black;
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
+}
+
+.button--Fill--blue {
+  font-size: 1.8rem;
+  color: white;
+  border: 0;
+  background-color: $blue;
+}
+
+//Form
+
+.input--Text, textarea {
+  border: 0;
+  background-color: #e8e9ea;
+  display: block;
+
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  width: 100%;
+
+  margin-bottom: 1.1rem;
+
+  &::placeholder, * {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: $black;
+    font-family: proxima-nova, sans-serif;
+  }
+}
+
+//Reset Safari Button
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.input--TextArea {
+  min-height: 14.5rem;
+}
+
+.formHeader {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: $black;
+  margin-bottom: 1rem;
+}
+
+//Images
+
+.imgWrapper {
+  max-width: 100%;
+  position: relative;
+
+  //Maybe Change Later
+  img {
+    width: 100%;
+  }
+}
+
+//List
+
+ul {
+  list-style: none; /* Remove default bullets */
+  list-style-position: outside;
+  list-style-type: disc;
+
+  li {
+    font-size: 1.8rem;
+    margin-bottom: 1.8rem;
+  }
+
+  li:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+//Links
+
+.nav {
+  .menuLink {
+    * {
+      color: white;
+    }
+    color: white;
+    display: block;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    text-decoration: none;
+  }
+
+  .menu__SubLink {
+    * {
+      color: white;
+    }
+  }
+}
+
+footer {
+  .menuLink {
+    display: block;
+    * {
+      color: $black;
+      display: block;
+    }
+    color: $black;
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin-bottom: 0.75em;
+  }
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+  .nav {
+ 
+  
+    .menu__SubLink {
+      * {
+        color: $black;
+      }
+    }
+  }
+
+
+
+}

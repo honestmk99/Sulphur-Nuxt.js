@@ -1,0 +1,97 @@
+/****
+Colors
+******/
+
+$black:#1D242B;
+
+
+$grey:#7A99AD;
+$blue:#456C86;
+
+
+
+/*************
+Very important to establish these variables
+***************/
+
+$mobMinFont: 10;
+$mobMaxFont: 12;
+$mobMinView: 375;
+$mobMaxView: 1024;
+
+$deskMinFont: 10;
+$deskMaxFont: 11;
+$deskMinView: 1366;
+$deskMaxView: 1920;
+
+$mobContainer: 78vw;
+$deskContainer: 80vw;
+$deskContainerAlt: 87vw;
+$maxWidth: 106rem;
+
+$maxWidthAlt:120rem;
+
+
+
+
+$smallBumper: (100vw - $mobContainer) / 2;
+
+$deskBumper: (100vw - $deskContainer) / 2;
+$deskBumperAlt:(100vw - $deskContainerAlt) / 2;
+
+
+$bumper: unquote("max( (100vw - #{$maxWidth}) / 2 , #{$deskBumper})");
+$bumperAlt : unquote("max( (100vw - #{$maxWidthAlt}) / 2 , #{$deskBumperAlt})");
+
+$menuHeight:13.2rem;
+
+//calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+:root {
+  font-size: calc(
+    #{$mobMinFont}px + (#{$mobMaxFont} - #{$mobMinFont}) *
+      ((100vw - #{$mobMinView}px) / (#{$mobMaxView} - #{$mobMinView}))
+  );
+  line-height: 1;
+  p {
+    line-height: 1.25;
+  }
+}
+
+//Utility
+.maxWidth {
+  max-width: $maxWidth;
+  width: $mobContainer;
+  margin: 0 auto;
+}
+
+.autoMarg {
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: $deskMinView * 1px) {
+  :root {
+    font-size: calc(
+      #{$deskMinFont}px + (#{$deskMaxFont} - #{$deskMinFont}) *
+        ((100vw - #{$deskMinView}px) / (#{$deskMaxView} - #{$deskMinView}))
+    );
+  }
+}
+
+
+
+@media (min-width: $deskMaxView * 1px) {
+  :root {
+    font-size: $deskMaxFont * 1px;
+  }
+}
+@media (min-width: 1024px)  {
+  .maxWidth {
+    width: $deskContainer;
+  }
+}
